@@ -3,7 +3,7 @@ const loginForm = document.querySelector(".login-form");
 const loginEmail = document.querySelector(".userEmail");
 const loginPassword = document.querySelector(".password");
 
-
+const userData = JSON.parse(localStorage.getItem("username"));
 
 const fetchAllUsers = async () => {
     try {

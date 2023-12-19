@@ -1,5 +1,5 @@
 const todoInput = document.querySelector(".todo-input");
-const bodyInput = document.querySelector(".bodyInput-input"); // Fix typo in class name
+const bodyInput = document.querySelector(".bodyInput-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
@@ -9,10 +9,11 @@ todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", handleTodoActions);
 filterOption.addEventListener("change", filterTodo);
 
-
-const userId = (JSON.parse(localStorage.getItem("user")) || "").id; // Handle cases where "user" key might not exist
+const userId = (JSON.parse(localStorage.getItem("user")) || "").id;
 console.log(userId);
 const apiUrl = `https://6570538609586eff66412160.mockapi.io/todo/api/v1/Login/${userId}/todo`;
+
+console.log(userId, apiUrl);
 
 function addTodo(event) {
     event.preventDefault();

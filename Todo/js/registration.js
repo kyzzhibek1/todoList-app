@@ -5,7 +5,7 @@ const regPassword = document.querySelector(".password");
 const regConfirmPassword = document.querySelector(".passwordCheck");
 
 const getUserId = () => {
-    const userData = JSON.parse(localStorage.getItem("user"));
+    const userData = JSON.parse(localStorage.getItem("username"));
     return userData ? userData.id : null;
 };
 
